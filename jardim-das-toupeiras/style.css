@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+
+    background: url(imagens/fundo.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.fundo {
+    display: flex;
+    height: 100vh;
+}
+
+.buracos {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    gap: 4.0rem;
+    margin: auto auto;
+}
+
+
+
+.toupeira6, .toupeira4, .toupeira11 {
+    animation-name: toupeirasobe;
+    animation-duration: 1s;
+    background-image: url(imagens/toupeira6.svg);
+}
+
+.toupeira4 {
+    animation-delay: 6s;
+}
+
+.toupeira11 {
+    animation-delay: 8s;
+}
+
+
+@keyframes toupeirasobe {
+    0% {
+        background-image: url(imagens/toupeira1.svg);
+    }
+    25% {
+        background-image: url(imagens/toupeira2.svg);
+    }
+    50% {
+        background-image: url(imagens/toupeira3.svg);
+    }
+    75% {
+        background-image: url(imagens/toupeira4.svg);
+    }
+    100% {
+        background-image: url(imagens/toupeira5.svg);
+    }
+}
